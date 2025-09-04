@@ -39,7 +39,7 @@ const App = () => {
           <div className="min-h-screen flex flex-col">
             <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-background/70 bg-background border-b">
               <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-                 <a href="/" className="font-extrabold tracking-tight text-lg"><img src="/attendance.jpg" className="w-8 object-cover"/>AttenDance</a>
+                 <a href="/" className="font-extrabold tracking-tight text-lg flex items-center gap-2"><img src="/attendance.jpg" className="w-8 object-cover"/>AttenDance</a>
                 <nav className="hidden md:flex items-center gap-4 text-sm">
                   <a href="/" className="hover:underline">Dashboard</a>
                   <a href="/session" className="hover:underline">Run Session</a>
