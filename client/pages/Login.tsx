@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authenticate } from "@/lib/auth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleLeft } from "@fortawesome/free-regular-svg-icons";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -24,6 +26,7 @@ export default function Login() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center p-6">
       <form onSubmit={submit} className="w-full max-w-md bg-card border rounded-xl p-6 space-y-4">
+         <a className="text-blue-700 inline-block " href="/"><FontAwesomeIcon icon={faCircleLeft} /></a>
         <h1 className="text-2xl font-semibold">Login</h1>
         {error && <div className="p-2 text-sm rounded-md border bg-rose-50 text-rose-700 border-rose-200">{error}</div>}
         <div>
