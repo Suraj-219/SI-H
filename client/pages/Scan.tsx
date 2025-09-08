@@ -1,5 +1,7 @@
 import { useState } from "react";
 import QRScanner from "@/components/QRScanner";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleLeft } from "@fortawesome/free-regular-svg-icons";
 
 export default function Scan() {
   const [message, setMessage] = useState<string>("");
@@ -7,6 +9,7 @@ export default function Scan() {
 
   return (
     <div className="mx-auto max-w-4xl p-6">
+       <a className="text-blue-700 inline-block " href="/"><FontAwesomeIcon icon={faCircleLeft} /></a>
       <h1 className="text-2xl font-semibold mb-4">Scan Attendance</h1>
       <QRScanner
         onResult={(r) => {
