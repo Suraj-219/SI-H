@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import QRDisplay from "@/components/QRDisplay";
 import { getSessionSummary, startSession, endSession, SessionSummaryResponse } from "@/api/sessions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleLeft } from "@fortawesome/free-regular-svg-icons";
 
 const demoCourses = [
   { id: "cs101", name: "CS101 - Intro to CS" },
@@ -47,6 +49,7 @@ export default function SessionRun() {
 
   return (
     <div className="mx-auto max-w-6xl p-6">
+      <a className="text-blue-700 inline-block " href="/"><FontAwesomeIcon icon={faCircleLeft} /></a>
       <h1 className="text-2xl font-semibold mb-4">Run Session</h1>
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-6">
         <div className="space-y-4">
