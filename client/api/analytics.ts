@@ -2,7 +2,7 @@ export interface AnalyticsResponse {
   daily: Array<{ date: string; rate: number }>;
   rate: number;
 }
-
+// get attendance api
 export async function getAttendanceAnalytics(_courseId?: string, range: string = "4w") {
   const days = range === "4w" ? 28 : 14;
   const today = new Date();
